@@ -28,12 +28,10 @@
     "noErrorTruncation": true,
     "skipLibCheck": true,
     "paths": {
-      "@i18prev/i18prev": [
-        "packages/i18prev/src/index.js"
-      ],
-      "@i18prev/i18prev/*": [
-        "packages/i18prev/src/*.js"
-      ]
+      "@i18prev/i18prev": ["packages/i18prev/src/index.js"],
+      "@i18prev/i18prev-codemod": ["packages/i18prev-codemod/src/index.js"],
+      "@i18prev/i18prev-codemod/*": ["packages/i18prev-codemod/*.js"],
+      "@i18prev/i18prev/*": ["packages/i18prev/src/*.js"]
     }
   }
 }

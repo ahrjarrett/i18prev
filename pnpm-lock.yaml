@@ -248,6 +248,13 @@ importers:
         version: 25.2.1(typescript@5.8.3)
     publishDirectory: dist
 
+  packages/i18prev-codemod:
+    devDependencies:
+      '@i18prev/i18prev':
+        specifier: workspace:^
+        version: link:../i18prev/dist
+    publishDirectory: dist
+
 packages:
 
   '@ampproject/remapping@2.3.0':
