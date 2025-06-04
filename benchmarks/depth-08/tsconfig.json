@@ -4,11 +4,7 @@
     "tsBuildInfoFile": ".tsbuildinfo/bench.tsbuildinfo",
     "rootDir": "bench",
     "types": ["node"],
-    "noEmit": true,
-    "paths": {
-      "@i18prev/i18prev": ["../../packages/i18prev/src"],
-      "@i18prev/i18prev/*": ["../../packages/i18prev/src/*"]
-    },
+    "noEmit": true
   },
   "references": [
     { "path": "../../packages/i18prev" }

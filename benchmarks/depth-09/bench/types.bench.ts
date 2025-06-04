@@ -19,9 +19,10 @@ i18next.init({
 })
 
 bench('〖⛳️〗› ❲i18next❳: generated type-level benchmark', () => {
+  // @ts-ignore
   i18next.t('$$$:D_8._.EN_0OP_4$.$._88.s.c.P_')
-}).types([5003536,"instantiations"])
+}).types([5003536, "instantiations"])
 
 bench('〖⛳️〗› ❲i18prev❳: generated type-level benchmark', () => {
   i18prev.t($ => $['$$$:'].D_8._.EN_0OP_4$.$._88.s.c.P_)
-}).types([338,"instantiations"])
+}).types([338, "instantiations"])

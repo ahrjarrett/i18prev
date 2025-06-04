@@ -19,9 +19,10 @@ i18next.init({
 })
 
 bench('〖⛳️〗› ❲i18next❳: generated type-level benchmark', () => {
+  // @ts-ignore
   i18next.t('_:_$f6IE$1Z$.jqb03L_._$$_dU$.g.__.$len.oogD')
-}).types([2416210,"instantiations"])
+}).types([2416210, "instantiations"])
 
 bench('〖⛳️〗› ❲i18prev❳: generated type-level benchmark', () => {
   i18prev.t($ => $['_:']._$f6IE$1Z$.jqb03L_._$$_dU$.g.__.$len.oogD)
-}).types([338,"instantiations"])
+}).types([338, "instantiations"])
