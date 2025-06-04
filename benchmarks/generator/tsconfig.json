@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": ".tsbuildinfo/bench.tsbuildinfo",
+    "rootDir": "src",
+    "types": ["node"],
+    "noEmit": true
+  },
+  "references": [
+  ],
+  "include": ["src"]
+}

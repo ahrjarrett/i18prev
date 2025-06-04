@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": ".tsbuildinfo/bench.tsbuildinfo",
+    "rootDir": "bench",
+    "types": ["node"],
+    "noEmit": true
+  },
+  "paths": {
+    "@i18prev/i18prev": ["../../packages/i18prev/src"],
+    "@i18prev/i18prev/*": ["../../packages/i18prev/src/*"]
+  },
+  "references": [
+    { "path": "../../packages/i18prev" }
+  ],
+  "include": ["bench"]
+}
+
+

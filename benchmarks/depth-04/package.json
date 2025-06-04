@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "check": "tsc -b tsconfig.json"
+  },
+  "dependencies": {
+    "@i18prev/i18prev": "workspace:^"
+  },
+  "devDependencies": {
+    "fast-check": "catalog:"
+  }
+}

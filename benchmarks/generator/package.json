@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@i18prev/i18prev": "workspace:^"
+  },
+  "devDependencies": {
+    "fast-check": "catalog:"
+  }
+}
