@@ -12,25 +12,96 @@ declare module 'i18next' {
 const defaultNS = 'ns1'
 
 const ns1 = {
+  /** 
+   * ## {@link ns1.title `ns1.title`} 
+   * 
+   * JSDocs for title translation
+   */
   title: 'Welcome!',
   description: {
+    /** 
+     * ## {@link ns1.description.part1 `ns1.description.part1`} 
+     * 
+     * JSDocs for description part 1 translation (namespace 1)
+     */
     part1: 'This is just a basic example of how to use i18next with typescript',
+    /** 
+     * ## {@link ns1.description.part2 `ns1.description.part2`} 
+     * 
+     * JSDocs for description part 2 translation (namespace 1)
+     */
     part2: '😉',
   },
+  /** 
+   * ## {@link ns1.inter `ns1.inter`} 
+   * 
+   * JSDocs for interpolation example
+   */
   inter: 'interpolated {{val}}',
+  /** 
+   * ## {@link ns1.interUnescaped `ns1.interUnescaped`} 
+   * 
+   * JSDocs for unescaped interpolation example
+   */
   interUnescaped: 'interpolated and unescaped {{- val}}',
+  /** 
+   * ## {@link ns1.some `ns1.some`} 
+   * 
+   * JSDocs for 'some' translation
+   */
   some: 'ctx',
+  /** 
+   * ## {@link ns1.some_me `ns1.some_me`} 
+   * 
+   * JSDocs for 'some_me' translation
+   */
   some_me: 'ctx2',
+  /** 
+   * ## {@link ns1.some_1234 `ns1.some_1234`} 
+   * 
+   * JSDocs for 'some_1234' translation
+   */
   some_1234: 'ctx3',
+  /** 
+   * ## {@link ns1.pl_one `ns1.pl_one`} 
+   * 
+   * JSDocs for 'pl_one' translation
+   */
   pl_one: 'sing',
+  /** 
+   * ## {@link ns1.pl_other `ns1.pl_other`} 
+   * 
+   * JSDocs for 'pl_other' translation
+   */
   pl_other: '{{count}} plur',
+  /** 
+   * ## {@link ns1.lastChanged `ns1.lastChanged`} 
+   * 
+   * JSDocs for 'lastChanged' translation
+   */
   lastChanged: 'Last changed {{- date}}',
+  /** 
+   * ## {@link ns1.lastChangedBy `ns1.lastChangedBy`} 
+   * 
+   * JSDocs for 'lastChangedBy' translation
+   */
+  lastChangedBy: 'Lasts changed on {{- date}} by {{- val}}',
 } as const
 
 const ns2 = {
   description: {
+    /** 
+     * ## {@link ns2.description.part1 `ns2.description.part1`} 
+     * 
+     * JSDocs for description part 1 translation (namespace 2)
+     */
     part1:
       'In order to infer the appropriate type for t function, you should use type augmentation to override the Resources type.',
+    /** 
+     * ## {@link ns2.description.part2 `ns2.description.part2`} 
+     * 
+     * JSDocs for description part 2 translation (namespace 2)
+     */
     part2: 'Check out the @types/i18next to see an example.',
   },
 } as const
@@ -82,6 +153,9 @@ vi.describe('〖⛳️〗‹‹‹ ❲@i18prev/i18prev❳', () => {
       t($ => $.lastChanged, { date }),
       i18next.t('lastChanged', { date }),
     )
+
+    const abc = t($ => $.lastChangedBy, { date, val: 'Bill Murray' })
+    i18next.t('lastChangedBy', { date: true, val: {} })
 
     vi.assert.equal(
       t($ => $['ns1:'].description.part1),
