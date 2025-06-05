@@ -39,7 +39,6 @@ export default function transformer(file: j.FileInfo, api: j.API) {
       path.node.source.value = 'i18prev'
     }
 
-    // TODO: can this be deleted?
     // import * as i18next from 'i18next' => import * as i18prev from 'i18prev'
     else if (specifiers.length === 1 && specifiers[0].type === 'ImportNamespaceSpecifier' && has('local', 'name')(specifiers[0])) {
       specifiers[0].local.name = 'i18prev'
