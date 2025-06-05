@@ -1,5 +1,6 @@
 export const PACKAGES = [
   'packages/i18prev',
+  'packages/i18prev-codemod',
   'benchmarks/depth-02',
   'benchmarks/depth-03',
   'benchmarks/depth-04',
